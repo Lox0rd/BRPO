@@ -3,6 +3,16 @@
 #include <string.h>
 #include <ctype.h>
 
+int isRoman(char chislo[]) {
+    char *valid_el = "IVXCDLM";
+    for(int i = 0; i < strlen(chislo); i++) {
+        if (strchr(valid_el, chislo[i]) == NULL) {
+            return 1;
+        }
+    }
+    return 0;
+}
+
 char *roman_to_units(const char *roman) {
     //Проверка входных данных
     if (!roman || *roman == '\0') return NULL;
@@ -169,14 +179,14 @@ int romantoint() {
     char *units1, *units2, *diff_units, *result_roman;
 
     printf("Введите первое римское число: ");
-    if (scanf("%99s", roman1) != 1) {
+    if (scanf("%99s", roman1) != 1 || isRoman(roman1)) {
         printf("Ошибка ввода первого числа.\n");
         return 1;
     }
 
     printf("Введите второе римское число: ");
-    if (scanf("%99s", roman2) != 1) {
-        printf("Ошибка ввода второго числа.\n");
+    if (scanf("%99s", roman2) != 1 || isRoman(roman2)) {
+        printf("Ошибка ввода Второго числа.\n");
         return 1;
     }
 

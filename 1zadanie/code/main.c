@@ -46,7 +46,7 @@ int main() {
     int choice;
     while (1) {
 
-    }
+    
     printf("Выберите программу для запуска:\n");
     printf("1 — Программа 1\n");
     printf("2 — Программа 2\n");
@@ -59,18 +59,21 @@ int main() {
     switch (choice) {
         case 1:
             romantoint();
+            break;
         case 2:
             program2();
+            break;
         case 3:
             program3();
+            break;
         case 0:
             printf("Выход из программы.\n");
-            break;
+            return 0;
         default:
             printf("Неверный выбор!\n");
     }
 
-    return 0;
+    }
     } 
     else {
         printf("\nПревышено количество попыток. Программа завершается.\n");
