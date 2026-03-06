@@ -2,18 +2,44 @@
 #include <string.h>
 
 #define MAX_ATTEMPTS 3
-#define CORRECT_LOGIN "admin"
-#define CORRECT_PASSWORD "password123"
+#define MAX_LEN 50
 
 void romantoint(void);
 void program2(void);
 void program3(void);
 
 int main() {
-    char login[50];
-    char password[50];
+    char login[MAX_LEN];
+    char password[MAX_LEN];
+    char CORRECT_LOGIN[MAX_LEN];
+    char CORRECT_PASSWORD[MAX_LEN];
     int attempts = 0;
     int login_success = 0;
+    const char* filename = "./paslog.txt";
+
+    FILE* fp = fopen(filename, "r");
+    if (!fp) {
+        printf("Ошибка чтения файла\n");
+        return 1;
+    }
+
+    if (fgets(CORRECT_LOGIN, MAX_LEN, fp) == NULL) {
+        printf("Ошибка чтения файла\n");
+        fclose(fp);
+        return 1;
+    }
+
+    CORRECT_LOGIN[strcspn(CORRECT_LOGIN, "\n")] = '\0';
+
+    if (fgets(CORRECT_PASSWORD, MAX_LEN, fp) == NULL) {
+        printf("Ошибка чтения файла\n");
+        fclose(fp);
+        return 1;
+    }
+
+    CORRECT_PASSWORD[strcspn(CORRECT_PASSWORD, "\n")] = '\0';
+
+    fclose(fp);
 
     printf("Добро пожаловать! Пожалуйста, войдите в систему.\n");
 
