@@ -5,7 +5,7 @@
 #define MAX_LEN 50
 
 void romantoint(void);
-void program2(void);
+void dvachisla(void);
 void program3(void);
 
 int main() {
@@ -87,7 +87,7 @@ int main() {
             romantoint();
             break;
         case 2:
-            program2();
+            dvachisla();
             break;
         case 3:
             program3();

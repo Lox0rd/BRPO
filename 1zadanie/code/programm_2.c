@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include <Windows.h>
+//#include <Windows.h>
 
-int main() {
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
+int dvachisla() {
+    //SetConsoleCP(1251);
+    //SetConsoleOutputCP(1251);
 
     char num1_str[1000];  
     char num2_str[1000];
@@ -17,10 +17,10 @@ int main() {
     int i;  
 
     printf("Введите первое число: ");
-    scanf_s("%s", num1_str, 1000);
+    scanf("%s1000", num1_str); //изменения
 
     printf("Введите второе число: ");
-    scanf_s("%s", num2_str, 1000);
+    scanf("%s1000", num2_str); //изменения
 
     i = 0;
     int sign1 = 1;
