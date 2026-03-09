@@ -12,7 +12,6 @@
 * `programm_2.c` — модуль № 2.
 * `programm_3.c` — модуль № 3.
 * Папка `code/` — содержит все исходные файлы `.c`.
-* Папка `workfiles/` — предназначена для размещения скомпилированного исполняемого файла(папку нужно создать самостоятельно)
 
 ## Функционал
 
@@ -23,4 +22,6 @@
 * Компилятор **GCC** (GNU Compiler Collection).
 * Операционная система: Linux, macOS или Windows (с поддержкой GCC, например, через WSL, MinGW или Cygwin).
 
-Команда для компиляции (**__gcc code/main.c code/programm_1(Lev).c code/programm_2.c code/programm_3.c -o workfiles/programm__**)
+**!Необходимо создать paslog.txt файл и прописать в нём логин в первой строка, а пароль во второй!**
+
+Команда для компиляции (**__gcc code/main.c code/programm_1(Lev).c code/programm_2.c code/programm_3.c -o programm__**)
