@@ -21,3 +21,5 @@
 **!Необходимо создать paslog.txt файл и прописать в нём логин в первой строка, а пароль во второй!**
 
 Команда для компиляции (**__gcc code/main.c code/programm_1(Lev).c code/programm_2.c code/programm_3.c -o programm__**)
+
+Сдача 10 марта 2026г
